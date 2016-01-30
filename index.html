@@ -6,16 +6,16 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container bg-1">
-        <p class="header-logo">
+      <div class="container bg-1"> <!-- если прописать так, то у тебя не получится синего бэкграунда на всю ширину экрана -->
+        <p class="header-logo"> <!-- логичнее просто див -->
           <a href="index.html">ТЕХНОМАРТ</a>
         </p>
         <form action="https://echo.htmlacademy.ru" method="get">
-          <button class="searching" type="submit">Поиск:</button>
+          <button class="searching" type="submit">Поиск:</button> <!-- можно ж короче назвать класс не searching, а протсо search ) -->
           <input type="search" name="s">
         </form>
-        <div class="marks">
-        <span>Закладки:</span>
+        <div class="marks"><!--  я бы объединила блок вот так http://joxi.ru/krDLV3kF0dkvYr -->
+        <span>Закладки:</span> <!-- А циферка во что подставляться будет? -->
           <!--Счетчик-->
         </div>
         <div class="basket">
@@ -26,13 +26,13 @@
       </div>
       <div class="container bg-2">
         <p class="about">
-          <em>Интернет-магазин строительных материалов и инструментов для ремонта</em>
+          <em>Интернет-магазин строительных материалов и инструментов для ремонта</em> <!-- Не надо em, это лучше делать стилями -->
         </p>
         <div class="header-contacts">
-          <p class="phone">+7 (812) 555-05-55</p>
+          <p class="phone">+7 (812) 555-05-55</p> 
           <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <div class="user-block">
+        <div class="user-block"> <!-- Тут еще должен быть блок для залогиненного пользователя, будем его скрывать стилс+ями потом -->
           <a class="login" href="#">Войти</a>
           <a class="registration" href="#">Регистрация</a>
         </div>
@@ -78,7 +78,7 @@
             <p class="promo-title">Техника</p>
             <a class="promo-btn" href="#">Для стройки</a>
           </div>
-          <div class="discount">
+          <div class="discount"> <!-- воу-воу-воу, ты это хочешь флоатами верстать или иначе? -->
             <p class="promo-title">Скидки 50%</p>
             <a class="promo-btn" href="#">На 350 товаров</a>
           </div>
@@ -98,20 +98,22 @@
               <button class="btn-prev">  <!--Стрелочка-->  </button>
               <button class="btn-next">  <!--Стрелочка-->  </button>
             </div>
-            <a class="promo-btn" href="#">Открыть каталог</a>
+            <a class="promo-btn" href="#">Открыть каталог</a> <!-- у всех кнопок класс promo-btn (у тех, что выше, например). Но они отличаются, например, цветом. Предлагаю, кому-нибудь сделать доп. класс -->
+            <!-- еще бы надо кружочки-переключатели -->
           </div>
         </div>
         <div class="popular">
           <h2>Популярные товары:</h2>
           <a class="btn" href="#">Все популярные товары</a>
         </div>
+        <!-- артиклы лучше тоже обернуть в общий контейнер -->
         <article class="item">
           <img class="item-icon" src="#">
           <p class="item-name">
             <a href="#">Перфоратор BOSH BFG 9000</a>
           </p>
           <span class="old-price">32500 Р.</span>
-          <br>
+          <br> <!-- Аааа!! Мои глаза, мои глаза!!! -->
           <span class="price">25500 Р.</span>
         </article>
         <article class="item">
@@ -145,7 +147,7 @@
           <h2>Популярные производители:</h2>
           <a class="btn" href="#">Все производители</a>
         </div>
-        <ul>
+        <ul> <!-- Хм.. а почему списком?  -->
           <li>
             <img src="#">
           </li>
@@ -174,10 +176,10 @@
       </div>
       <div class="container bg-2">
         <h2>Сервисы</h2>
-        <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+        <p>Хороший интернет-магазин отличается от плохого не только ценами!<br><!--  Неееееэээт -->
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="slider-2">
-          <ul class="tabs">
+          <ul class="tabs"> <!-- можно обернуть еще в див, чтобы тень справа удобнее было размещать -->
             <li>
               <a class="tab-1" href="#">Доставка</a>
             </li>
@@ -198,11 +200,11 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container"><!--  давай ему класс дадим?) -->
         <div class="left-col">
           <h2>Компания "Техномарт"</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br> <!-- тут ок ;) -->
           Техномарт работает со многими транспортными компаниями:</p>
           <ul>
             <li>Деловые линии</li>
@@ -213,7 +215,7 @@
         </div>
         <div class="right-col">
           <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами,<br>
+          <p>Вы можете забрать товар сами,<br> <!-- а тут можно ширину параграфу задать и не использовать br -->
           заехав в наш офис:</p>
           <div class="map">
             <a href="#">
@@ -224,14 +226,14 @@
         </div>
       </div>
     </main>
-    <footer class=main-footer>
-      <div class="container bg-4">
-        <p class="footer-logo"> 
+    <footer class=main-footer> <!-- Паника-паника! Чего-то не хватает и все сломается! -->
+      <div class="container bg-4"> <!-- хм.. вообще интересная разметка футера) -->
+        <p class="footer-logo"> <!-- див -->
           <a href="index.html">ТЕХНОМАРТ</a> 
         </p>
-        <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+        <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br> <!-- !!!! -->
         +7 (812) 555-05-55</p>
-        <nav class="footer-navigation">
+        <nav class="footer-navigation"> <!-- nav - только для основного меню -->
           <ul>
             <li>
               <a href="#">Компания</a>
@@ -265,8 +267,8 @@
           </ul>
         </nav>
       </div> 
-      <div class="container bg-5">
-        <section class="rights">
+      <div class="container bg-5"> <!-- а тут цвет bg такойже как и в самом верху ;) -->
+        <section class="rights"> <!-- ненене, section сюда не подходит -->
           2010-2016 Компания "Техномарт"<br>
           Все права защищены
         </section>
@@ -276,12 +278,12 @@
           <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
         </section>
         <section class="feedback">
-          Обратная связь:<br>
+          Обратная связь:<br> <!-- можно спан сделать блоным элементом и br будет не нужен -->
           <span class="yellow-text">mail@htmlacademy.ru</span>
         </section>
         <section class="copyright">
          Разработано:<br>
-         <a class="btn yellow-text" href="https://htmlacademy.ru">htmlacademy.ru</a>
+         <a class="btn yellow-text" href="https://htmlacademy.ru">htmlacademy.ru</a> <!-- а btn зачем? -->
         </section>
       </div>
     </footer>
