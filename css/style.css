@@ -1,0 +1,26 @@
+body {
+  font-family: "PTSans";
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #000000;
+}
+
+h1, h2 {
+  font-family: "Cuprum";
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.bg-2 h2 {
+  color: #000000;
+  line-height: 24px;
+}
+
+.information h2 {
+  color: #000000;
+  line-height: auto;
+}
