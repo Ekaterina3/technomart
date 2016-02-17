@@ -1,12 +1,11 @@
 html,
 body {
-  width: 1200px;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "PTSans", sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
@@ -14,7 +13,7 @@ body {
 }
 
 h1, h2 {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: normal;
@@ -22,7 +21,8 @@ h1, h2 {
   color: #32425c;
 }
 
-.bg-2 h2 {
+.service h2,
+.catalog-text h2 {
   color: #000000;
   line-height: 24px;
 }
@@ -39,8 +39,7 @@ h1 {
   padding-top: 29px;
   padding-bottom: 30px;
   margin-bottom: 20px;
-  background-color: burlywood; /* Почему отдельно взятые вертикальные отступы работают, а vertical-aligh и padding:auto 0 -нет??? Текст прижимается к верхнему краю. */
-  
+  /*background-color: burlywood;*/
 }
 
 .clearfix::after {
@@ -55,13 +54,11 @@ h1 {
   padding: 0 10px;
 }
 
-header {
-  font-family: "Cuprum", sans-serif;
-}
-.bg-1 {
-  background-color: #293449;
+.main-header {
+  font-family: "Cuprum", "Arial", sans-serif;
   color: #ffffff;
-  font-weight: normal;
+  background-color: #f1f5f7;
+  padding-bottom: 60px;
 }
 
 .header-logo {
@@ -75,83 +72,84 @@ header {
 
 .header-logo a {
   display: block;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none; 
   padding: 9px 0;
+  box-shadow: 0 5px 0 0 #b52933;
   
 }
 
-.bg-1 form {
+.main-header form {
   float: left;
   width: 240px; 
   height: 42px;
 }
-.search {
+.btn-search {
   width: 45px;
 }
 
 .indicate {
   float: right; 
   width: 450px;
-  font-size: 17px;
-  line-height: 18px;
+  font-size: 0;
 }
 
 .marks {
   display: inline-block;
   width: 106px;
-  vertical-align: middle;
+  font-size: 17px;
+  line-height: 18px;
+  /*vertical-align: middle;*/
   padding-left: 44px;
 }
 
 .basket {
   display: inline-block;
   width: 100px;
-  vertical-align: middle;
+  font-size: 17px;
+  line-height: 18px;
+  /*vertical-align: middle;*/
   padding-left: 50px;
-  margin-left: -4px; 
 }
+
 
 .send-order {
   display: inline-block;
   width: 150px;
-  height: 18px;
+  font-size: 17px;
+  line-height: 18px;
   color: #ffffff;
   background-color: #63a63e;
   text-decoration: none;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  margin-left: -5px;
 }
 
-.bg-2 {
-  background-color: #f1f5f7;
+.dark-scene {
+  background-color: #293449 ;
 }
 .about {
   float: left;
   width: 197px;
-  height: 70px;
-  text-align: left;
-  vertical-align: bottom;
+  min-height: 70px;
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
   color: #ee3643;
   padding-left: 53px;
-  margin-top: 51px;
-  margin-bottom: 37px;
+  margin-top: 52px;
+  margin-bottom: 36px;
   margin-right: 70px;
 }
 
 .header-contacts {
   float: left;
   width: 270px;
-  height: 70px;
   margin-top: 45px;
 }
 
@@ -160,7 +158,6 @@ header {
   font-size: 21px;
   color: #e9292a;
   border: 3px solid #ffffff;
-  vertical-align: middle;
   padding-left: 70px;
   padding-right: 49px;
   padding-top: 9px;
@@ -172,7 +169,6 @@ header {
   font-size: 14px;
   line-height: 24px;
   text-align: center;
-  vertical-align: middle;
   color: #32425c;
   margin: 0;
   padding-top: 5px;
@@ -181,7 +177,7 @@ header {
 .user-block {
   float: right;
   width: 320px;
-  height: 70px;
+  min-height: 70px;
   margin-top: 46px;
 }
 
@@ -199,13 +195,10 @@ header {
   display: inline-block; 
 }
 
-header .bg-2 {
-  padding-bottom: 60px;
-}
 .materials {
   float: left;
   width: 280px;
-  height: 76px;
+  min-height: 76px;
   padding-left: 20px;
   padding-top: 25px;
   padding-bottom: 22px;
@@ -215,7 +208,7 @@ header .bg-2 {
 .tools {
   float: left;
   width: 280px;
-  height: 76px;
+  min-height: 76px;
   padding-left: 20px;
   padding-top: 25px;
   padding-bottom: 22px;
@@ -225,7 +218,7 @@ header .bg-2 {
 .technics {
   float: right;
   width: 280px;
-  height: 76px;
+  min-height: 76px;
   padding-left: 20px;
   padding-top: 25px;
   padding-bottom: 22px;background-color: cornflowerblue;
@@ -249,7 +242,7 @@ header .bg-2 {
 
 .discount {
   width: 280px;
-  height: 76px;
+  min-height: 76px;
   padding-left: 20px;
   padding-top: 25px;
   padding-bottom: 22px;
@@ -258,7 +251,7 @@ header .bg-2 {
 
 .delivery {
   width: 280px;
-  height: 76px;
+  min-height: 76px;
   padding-left: 20px;
   padding-top: 25px;
   padding-bottom: 22px;background-color: cornflowerblue;
@@ -266,13 +259,12 @@ header .bg-2 {
 
 .slider {
   width: 575px;
-  height: 219px;
+  min-height: 219px;
   padding: 25px 20px 22px 25px; background-color: cornflowerblue;
 }
 
 .popular {
-  width: 910px;
-  height: 89px;
+  min-height: 89px;
   padding-left: 30px;
   margin-bottom: 20px; background-color: cadetblue;
 }
@@ -288,7 +280,7 @@ header .bg-2 {
 .item {
   float: left;
   width: 220px;
-  height: 318px;
+  min-height: 318px;
   margin-right: 20px;
   margin-bottom: 20px;
   text-align: center; background-color: cadetblue;
@@ -307,11 +299,12 @@ header .bg-2 {
   height: 170px;
 }
 .item-icon img {
-  vertical-align: middle;  /*Почему не работает выравнивание по вертикали? Я кучу вариантов перепробовала, не получается( Оставила этот пока*/
+    /*Почему не работает выравнивание по вертикали? Я кучу вариантов перепробовала, не получается( Оставила этот пока*/
 }
 
 .producer {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: 220px;
   height: 145px;
   margin-right: 20px;
@@ -319,23 +312,21 @@ header .bg-2 {
 }
 
 .producer img {
-  vertical-align: middle;   /*Та же проблема с выравниванием*/
-}
-
-.prod-top {
-   margin-bottom: 20px;
-}
+    /* Та же проблема с выравниванием*/
+} 
 
 .producers {
+  font-size: 0;
   margin-bottom: 85px;
 }
 
-.producer:last-child {
+.producer:nth-child(4) {
   margin-right: 0;
 }
 
 .service {
   padding-top: 46px;
+background-color: #f1f5f7;
 }
 .service p {
   width: 400px;
@@ -415,8 +406,7 @@ header .bg-2 {
 }
 
 .column-top {
-  width: 700px;
-  height: 38px;
+  min-height: 38px;
   margin-bottom: 20px;
   margin-top: 0;background-color: magenta;
 }
