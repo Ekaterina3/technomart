@@ -11,6 +11,60 @@ body {
   font-weight: normal;
   color: #000000;
 }
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-technomart";
+  src: url("../fonts/symbols-technomart.woff") format("woff"),
+       url("../fonts/symbols-technomart.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-technomart";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+
+  speak: none;
+}
+
+.icon-left::before { content: "\3c"; } /* "&lt;" */
+.icon-right::before { content: "\3e"; } /* "&gt;" */
+.icon-basket::before { content: "\62"; } /* "b" */
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-vk::before { content: "\76"; } /* "v" */
+.icon-up::before { content: "\2c4"; } /* "˄" */
+.icon-down::before { content: "\2c5"; } /* "˅" */
+.icon-left-big::before { content: "\2190"; } /* "←" */
+.icon-right-big::before { content: "\2192"; } /* "→" */
+.icon-login::before { content: "\2386"; } /* "⎆" */
+.icon-logout::before { content: "\241b"; } /* "␛" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-circle::before { content: "\25cb"; } /* "○" */
+.icon-circle-dot::before { content: "\25cf"; } /* "●" */
+.icon-star::before { content: "\2605"; } /* "★" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-youtube::before { content: "\f39e"; } /* "" */
+.icon-home::before { content: "🏠"; } /* "\1f3e0" */
+.icon-user::before { content: "👨"; } /* "\1f468" */
+.icon-phone::before { content: "📞"; } /* "\1f4de" */
+.icon-instagramm::before { content: "📷"; } /* "\1f4f7" */
+.icon-search::before { content: "🔍"; } /* "\1f50d" */
+.icon-bookmark::before { content: "🔖"; } /* "\1f516" */
 
 h1, h2 {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -37,6 +91,7 @@ h1 {
   padding-left: 30px;
   padding-top: 29px;
   padding-bottom: 30px;
+  margin:0;
   margin-bottom: 20px;
   background-color: #f2f6f8;
 }
@@ -67,6 +122,7 @@ h3 {
   color: #ffffff;
   background-color: #f1f5f7;
   padding-bottom: 60px;
+  
 }
 
 .header-logo {
@@ -93,17 +149,46 @@ h3 {
 
 .main-header form {
   float: left;
-  width: 240px; 
-  height: 42px;
+  
 }
 .btn-search {
-  width: 45px;
+  width: 25px;
+  height: 25px;
+  display: none;
 }
+
+input[type="search"] {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 191px; 
+  background-color: #293449;
+  color: #ffffff;
+  padding: 12px 0;
+  padding-left: 49px;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 17px;
+  color: #ffffff; 
+}
+
+/*button[type="submit"]::before {
+  position: absolute;
+  content: '';
+  background: url("../img/sprite.png") no-repeat -106px -10px;
+  width: 14px;
+  height: 16px;
+  top: 12px;
+  left: 239px;
+  opacity: 0.3;
+}*/
 
 .indicate {
   float: right; 
   width: 450px;
   font-size: 0;
+  position: relative;
 }
 
 .marks {
@@ -112,6 +197,17 @@ h3 {
   font-size: 17px;
   line-height: 18px;
   padding-left: 44px;
+
+}
+.marks::before {
+  position: absolute;
+  content: '';
+  background: url("../img/sprite.png") no-repeat -106px -10px;
+  width: 14px;
+  height: 16px;
+  top: 12px;
+  left: 17px;
+  opacity: 0.3;
 }
 
 .basket {
@@ -122,6 +218,16 @@ h3 {
   padding-left: 50px;
 }
 
+.basket::before {
+  position: absolute;
+  content: '';
+  background: url("../img/sprite.png") no-repeat -69px -10px;
+  width: 17px;
+  height: 16px;
+  top: 12px;
+  left: 167px;
+  opacity: 0.3;
+}
 
 .send-order {
   display: inline-block;
@@ -169,6 +275,17 @@ h3 {
   padding-top: 9px;
   padding-bottom: 9px;
   margin: 0;
+  position: relative;
+}
+
+.phone::before {
+  position: absolute;
+  content: '';
+  background: url("../img/sprite.png") no-repeat  -626px -10px;
+  width: 19px;
+  height: 19px;
+  top: 13px;
+  left: 10px;
 }
 
 .address {
@@ -186,16 +303,19 @@ h3 {
   min-height: 70px;
   margin-top: 46px;
   font-size: 0;
+  position: relative;
 }
 
 .not-authorized {
-  display: block;
+  display: none;
   padding-left: 40px;
+
 }
 
 .authorized {
-  display: none;
+  display: block;
   padding-left: 20px;
+ 
 }
 
 .login {
@@ -214,6 +334,17 @@ h3 {
   padding-right: 27px;
   background: #ffffff;
   margin-right: 10px;
+}
+
+.login::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url("../img/sprite.png") no-repeat -464px -10px;
+  width: 20px;
+  height: 17px;
+  top: 15px;
+  left: 35px;
 }
 
 .registration {
@@ -248,6 +379,30 @@ h3 {
   padding-right: 65px;
   margin-bottom: 9px;
 }
+
+.user-icon::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url("../img/sprite.png") no-repeat -809px -10px;
+  width: 20px;
+  height: 18px;
+  top: 15px;
+  left: 35px;
+}
+
+.logout-icon::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url("../img/sprite.png") no-repeat -544px -10px;
+  width: 21px;
+  height: 17px;
+  top: 15px;
+  right: 10px;
+  
+}
+
 
 .user-block-nav a {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -593,7 +748,7 @@ h3 {
 
 .service h2+p {
   width: 430px;
-  min-height: 50px;background-color: aqua;
+  min-height: 50px;
   padding: 0;/*По макету ширину абзаца можно брать 400px, но в реальности строчки не влезают в такую ширину (размеры шрифта соблюдены). В чем проблема? */
   
 }
@@ -691,6 +846,9 @@ h3 {
   margin-bottom: 86px;
 }
 
+.information ul {
+  padding: 0;
+}
 .information li {
   list-style: none;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -698,6 +856,18 @@ h3 {
   font-weight: bold;
   line-height: 20px;
   padding-bottom: 22px;
+  padding-left: 36px;
+  position: relative;
+  
+  
+}
+.marker {
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
+  left: 0;
+  top: 9px;
 }
 
 .right-col p {
@@ -725,17 +895,25 @@ h3 {
 
 .breadcrumbs li {
   display: inline-block;
-  padding: 21px 0; 
-  padding-left: 39px;
-  
+  padding: 21px 0;
 }
 
 .breadcrumbs a,
-.breadcrumbs li{
+.breadcrumbs li {
   line-height: 18px;
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.icon-home {
+  font-size: 16px;
+  opacity: 0.3;
+}
+
+.breadcrumbs span {
+  padding: 0 15px;
+  opacity: 0.3;
 }
 
 .left-column {
@@ -752,11 +930,13 @@ h3 {
 
 .column-top {
   line-height: 18px;
-  padding: 10px 18px;
+  padding: 10px 0;
+  padding-left: 18px;
   margin: 0;
   margin-bottom: 20px;
   background-color: #f7f3ec;
   position: relative;
+  text-transform: uppercase;
 }
 
 .left-column .column-top {
@@ -766,20 +946,25 @@ h3 {
 .sorting {
   padding: 0;
   margin: 0;
-  padding-left: 140px;
+  margin-left: 120px;
   list-style: none;
   display: inline;
 }
 
 .sorting li {
   display: inline-block;
-  width: 123px;
+  margin-right: 60px;
+}
+
+.sorting li:last-child {
+  margin-right: 0;
 }
 
 .sorting a {
   color: #acaaa5;
   text-decoration: none;
   border-bottom: 1px dotted #ee3643;
+  text-transform: uppercase;
 }
 .sorting .active {
   color: #ee3643;
@@ -788,14 +973,14 @@ h3 {
 
 .range-indicate {
   position: absolute;
-  top: 14px;
+  top: 8px;
   right: 17px;
 }
 
 .range-indicate a {
   text-decoration: none;
   color: #acaaa5;
-  padding-left: 20px;
+  font-size: 20px;
 }
 
 .range-indicate .active {
@@ -893,9 +1078,9 @@ fieldset {
   content: '';
   display: block;
   position: absolute;
-  width: 27px;
-  height: 27px;
-  /*background: url("") no-repeat 0 0;*/
+  width: 23px;
+  height: 23px;
+  background: url("../img/sprite.png") no-repeat -140px -10px;
   top: -1px;
   left: 0;
 }
@@ -904,8 +1089,8 @@ fieldset {
   display: block;
   position: absolute;
   width: 27px;
-  height: 27px;
- /* background: url("") no-repeat 0 0;*/
+  height: 23px;
+  background: url("../img/sprite.png") no-repeat -183px -10px;
   top: -1px;
   left: 0;
 }
@@ -935,7 +1120,7 @@ fieldset {
   position: absolute;
   width: 27px;
   height: 27px;
-  /*background: url("") no-repeat 0 0;*/
+  background: url("../img/sprite.png") no-repeat -230px -10px;
   top: -1px;
   left: 0;
 }
@@ -946,7 +1131,7 @@ fieldset {
   position: absolute;
   width: 27px;
   height: 27px;
- /* background: url("") no-repeat 0 0;*/
+  background: url("../img/sprite.png") no-repeat -275px -10px;
   top: -1px;
   left: 0;
 }
@@ -1093,6 +1278,45 @@ fieldset {
   height: 43px;
 }
 
+.social-btn {
+  display: inline-block;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: #212a3a;
+  font-size: 0;
+  position: relative;
+  vertical-align: top;
+}
+
+.social-btn::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/sprite.png") no-repeat;
+  
+}
+
+.social-btn-vk::before {
+  background-position: -889px -10px;
+  width: 20px;
+  height: 12px;
+}
+
+.social-btn-fb::before {
+  background-position: -320px -10px;
+  width: 10px;
+  height: 18px;
+}
+
+.social-btn-inst::before {
+  background-position: -385px -10px;
+  width: 17px;
+  height: 17px;
+}
+
 .feedback {
   float: right;
   width: 140px;
@@ -1130,3 +1354,146 @@ fieldset {
 }
 
 
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-check {
+    width: 39px;
+    height: 29px;
+    background-position: -10px -10px;
+}
+
+.sprite-icon-basket {
+    width: 17px;
+    height: 16px;
+    background-position: -69px -10px;
+}
+
+.sprite-icon-bookmark {
+    width: 14px;
+    height: 16px;
+    background-position: -106px -10px;
+}
+
+.sprite-icon-check-off {
+    width: 23px;
+    height: 23px;
+    background-position: -140px -10px;
+}
+
+.sprite-icon-check-on {
+    width: 27px;
+    height: 23px;
+    background-position: -183px -10px;
+}
+
+.sprite-icon-circle {
+    width: 25px;
+    height: 25px;
+    background-position: -230px -10px;
+}
+
+.sprite-icon-circle-dot {
+    width: 25px;
+    height: 25px;
+    background-position: -275px -10px;
+}
+
+.sprite-icon-facebook {
+    width: 10px;
+    height: 18px;
+    background-position: -320px -10px;
+}
+
+.sprite-icon-home {
+    width: 15px;
+    height: 12px;
+    background-position: -350px -10px;
+}
+
+.sprite-icon-instagramm {
+    width: 17px;
+    height: 17px;
+    background-position: -385px -10px;
+}
+
+.sprite-icon-left {
+    width: 22px;
+    height: 40px;
+    background-position: -422px -10px;
+}
+
+.sprite-icon-login {
+    width: 20px;
+    height: 17px;
+    background-position: -464px -10px;
+}
+
+.sprite-icon-login-active {
+    width: 20px;
+    height: 17px;
+    background-position: -504px -10px;
+}
+
+.sprite-icon-logout {
+    width: 21px;
+    height: 17px;
+    background-position: -544px -10px;
+}
+
+.sprite-icon-logout-active {
+    width: 21px;
+    height: 17px;
+    background-position: -585px -10px;
+}
+
+.sprite-icon-phone {
+    width: 19px;
+    height: 19px;
+    background-position: -626px -10px;
+}
+
+.sprite-icon-right {
+    width: 22px;
+    height: 40px;
+    background-position: -665px -10px;
+}
+
+.sprite-icon-right-little {
+    width: 8px;
+    height: 12px;
+    background-position: -707px -10px;
+}
+
+.sprite-icon-search {
+    width: 17px;
+    height: 17px;
+    background-position: -735px -10px;
+}
+
+.sprite-icon-search-active {
+    width: 17px;
+    height: 17px;
+    background-position: -772px -10px;
+}
+
+.sprite-icon-user {
+    width: 20px;
+    height: 18px;
+    background-position: -809px -10px;
+}
+
+.sprite-icon-user-active {
+    width: 20px;
+    height: 18px;
+    background-position: -849px -10px;
+}
+
+.sprite-icon-vk {
+    width: 20px;
+    height: 12px;
+    background-position: -889px -10px;
+}
