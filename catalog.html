@@ -105,7 +105,7 @@
           <p class="column-top">Фильтр:</p>
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="filter-1">
-              <legeng>Цена:</legeng>
+              <legend>Цена:</legend>
               <div class="price-filter">
                 <div class="range-controls">
                   <div class="scale">
@@ -122,20 +122,20 @@
               </div>
             </fieldset>
             <fieldset class="filter-2">
-              <legeng>Производители:</legeng>
+              <legend>Производители:</legend>
               <input id="bosh" type="checkbox" name="bosh" checked>
-              <ladel for="bosh"> BOSH </ladel>
+              <label for="bosh"> Bosh </label>
               <input id="interskol" type="checkbox" name="interskol">
-              <ladel for="interskol"> ИНТЕРСКОЛ </ladel>
+              <label for="interskol"> Интерскол </label>
               <input id="makita" type="checkbox" name="makita" checked>
-              <ladel for="makita"> MAKITA </ladel>
+              <label for="makita"> Makita </label>
               <input id="dewalt" type="checkbox" name="dewalt">
-              <ladel for="dewalt"> DEWALT </ladel>
+              <label for="dewalt"> Dewalt </label>
               <input id="hitachi" type="checkbox" name="hitachi">
-              <ladel for="hitachi"> HITACHI </ladel>
+              <label for="hitachi"> Hitachi </label>
             </fieldset>
             <fieldset class="filter-3">
-              <legeng>Питание:</legeng>
+              <legend>Питание:</legend>
               <input id="battery" type="radio" name="power" value="battery" checked>
               <label for="battery"> Аккумуляторные </label>
               <input id="electric" type="radio" name="power" value="electricity">
@@ -146,10 +146,10 @@
         </aside>
           <div class="right-column">
           <div class="column-top">
-            <p>Сортировка:</p>
+            <span>Сортировка:</span>
             <ul class="sorting">
               <li>
-                <a href="#">По цене</a>
+                <a class="active" href="#">По цене</a>
               </li>
               <li>
                 <a href="#">По типу</a>
@@ -157,13 +157,11 @@
               <li>
                 <a href="#">По функционалу</a>
               </li>
-              <li>
-                <a href="#"> <img src="#"> </a>
-              </li>
-              <li>
-                <a href="#"> <img src="#"> </a>
-              </li>
             </ul>
+            <div class="range-indicate">
+              <a class="active" hre="#">a</a>
+              <a href="#">a</a>
+            </div>
           </div>
           <div class="catalog-list clearfix">
             <article class="item">
@@ -294,26 +292,11 @@
             </article>
           </div>
           <div class="paginator"> 
-            <a class="btn-page active" href="#">1</a> 
+            <a class="btn-page current" href="#">1</a> 
             <a class="btn-page" href="#">2</a>
             <a class="btn-page" href="#">3</a>
             <a class="btn-page next" href="#">Следующая</a>
           </div>  
-          <div class="confirm"> <!--Блок подтверждения покупки - куда лучше вставить?-->
-            <div class="close"> <!--И снова крестик-->
-              <img src="img/Cross.svg">
-            </div>
-            <div class="container-2">
-              <img src="#">
-              <p>Товар добавлен в корзину!</p>
-            </div>
-            <div class="btn-area">
-              <div class="container-2">
-                <a class="btn" href="#">Оформить заказ</a>
-                <a class="btn continue" href="#">Продолжить покупки</a>
-              </div>
-            </div>
-          </div>
         </div>
         </div>
       </div>
@@ -324,7 +307,7 @@
             Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
       </div>
-    </man>
+    </main>
     <footer class="main-footer">
       <div class="container clearfix">
         <div class="footer-logo">
@@ -387,6 +370,20 @@
         </div>
       </div>
     </footer>
+    <div class="modal-content">
+      <div class="confirm">
+        <div class="container-2">
+          <img src="#">
+          <p>Товар добавлен в корзину!</p>
+        </div>
+        <div class="btn-area">
+          <div class="container-2">
+            <a class="btn" href="#">Оформить заказ</a>
+            <a class="btn continue" href="#">Продолжить покупки</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 

@@ -34,11 +34,11 @@ h1, h2 {
 
 h1 {
   text-align: left;
-  height: 39px;
   padding-left: 30px;
   padding-top: 29px;
   padding-bottom: 30px;
   margin-bottom: 20px;
+  background-color: #f2f6f8;
 }
 
 h3 {
@@ -111,7 +111,6 @@ h3 {
   width: 106px;
   font-size: 17px;
   line-height: 18px;
-  /*vertical-align: middle; Без этого свойства текст по центру, с ним - сползает вниз. Не пойму, что такое.*/
   padding-left: 44px;
 }
 
@@ -120,7 +119,6 @@ h3 {
   width: 100px;
   font-size: 17px;
   line-height: 18px;
-  /*vertical-align: middle;*/
   padding-left: 50px;
 }
 
@@ -321,31 +319,30 @@ h3 {
 .materials {
   float: left;
   width: 260px;
-  min-height: 78px;
+  min-height: 79px;
   padding: 22px 20px;
   margin-right: 20px; 
-  background-color: #f6b22d;
-  background-image: url("img/materials.png"); /*?????????????? Картинка, ты где???*/
-  background-repeat: no-repeat;
-  background-position: 213px 31px;
+  background: #f6b22d url("../img/materials.png") no-repeat 213px 31px;
+  position: relative;
 }
 
 .tools {
   float: left;
   width: 260px;
-  min-height: 78px;
+  min-height: 79px;
   padding: 22px 20px;
   margin-right: 20px; 
-  background-color: #4aafde;
-  background-image: ;
+  background: #4aafde url("../img/tools.png") no-repeat 197px 33px;
+  position: relative;
 }
 
 .technics {
   float: right;
   width: 260px;
-  min-height: 78px;
+  min-height: 79px;
   padding: 22px 20px;
-  background-color: #cc79d1;
+  background: #cc79d1 url("../img/technics.png") no-repeat 191px 31px;
+  position: relative;
 }
 
 .promo{
@@ -366,17 +363,19 @@ h3 {
 
 .discount {
   width: 260px;
-  min-height: 78px;
+  min-height: 79px;
   padding: 22px 20px;
   margin-bottom: 20px; 
-  background-color: #85d179;
+  background: #85d179 url("../img/discount.png") no-repeat 196px 26px;
+  position: relative;
 }
 
 .delivery {
   width: 260px;
-  min-height: 78px;
+  min-height: 79px;
   padding: 22px 20px;
-  background-color: #f6b22d;
+  background: #f6b22d url("../img/deliver.png") no-repeat 191px 32px;
+  position: relative;
 }
 
 .slider {
@@ -386,6 +385,17 @@ h3 {
   padding-right: 20px;
   padding-bottom: 22px;
   padding-left:  25px; background-color: cornflowerblue;
+}
+
+.new-flag::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  content: '';
+  background: url("../img/new.png") no-repeat 0 0;
 }
 
 .popular {
@@ -412,6 +422,7 @@ h3 {
   float: left;
   width: 218px;
   min-height: 316px;
+  position: relative;
   font-weight: bold;
   text-align: center;
   border: 1px solid #e5e5e5;
@@ -430,13 +441,118 @@ h3 {
 
 .item-icon {
   width: 218px;
-  height: 168px;
-  vertical-align: top;
-  
+  min-height: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
 }
 .item-icon img {
-  display: inline-block;
-  vertical-align: middle;       /*И все равно не выравнивается. margin: auto 0; тоже не работает*/
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.item-name {
+  padding: 0 25px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.item-name a {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+}
+
+.old-price {
+  display: block;
+  min-height: 20px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.price {
+  display: block;
+  position: relative;
+  width: 80px;
+  margin: 0 auto 20px;
+  padding: 10px 30px;
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  border-radius: 3px;
+  background-color: #ee3643;
+}
+
+.price::after {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  content: '';
+  border: 19px solid #ffffff;
+  border-left-color: #ee3643;
+}
+
+.new::before {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  content: '';
+  background: url("../img/new.png") no-repeat 0 0;
+}
+
+.buying {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: #ffffff; 
+}
+
+.btn-buy,
+.btn-mark {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  display: block;
+  width: 135px;
+  margin: 0 auto 7px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 3px;
+  background-color: #63a63e;
+}
+
+.btn-buy {
+  box-shadow: inset 0 -3px 0 #367315;
+}
+
+.btn-mark {
+  width: 129px;
+  padding: 7px 0;
+  color: #63a63e;
+  border: 3px solid #63a63e;
+  background-color: #fff;
+}
+
+.buying {
+  display: none;
+}
+
+.item:hover .buying {
+  display: block;
 }
 
 .producers {
@@ -447,21 +563,26 @@ h3 {
 
 .producer {
   display: inline-block;
-  vertical-align: top;
   width: 220px;
-  height: 145px;
-  margin-right: 20px;
   margin-bottom: 20px;
-  text-align: center; background-color: cornflowerblue; /*Почему съехал последний блок?*/
+  margin-right: 20px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.producer-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 145px;
+  resize: vertical;
 }
 
 .producer img {
-  display: inline-block;
-  margin: auto 0;
- /* Та же проблема с выравниванием, что и у картинок каталога.*/
+  margin: auto;
 } 
 
-.producer:nth-child(4) {
+.producer:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -470,9 +591,10 @@ h3 {
   background-color: #f1f5f7;
 }
 
-.service p {
-  width: 400px;
-  min-height: 50px; /*По макету ширину блока можно брать 400px, в реальности строчки не влезают в такую ширину (размеры шрифта соблюдены). Как понимать? */
+.service h2+p {
+  width: 430px;
+  min-height: 50px;background-color: aqua;
+  padding: 0;/*По макету ширину абзаца можно брать 400px, но в реальности строчки не влезают в такую ширину (размеры шрифта соблюдены). В чем проблема? */
   
 }
 
@@ -509,29 +631,43 @@ h3 {
 .pages {
   float: right;
   width: 620px;
-  height: 330px;
   margin-top: 25px;
 }
 
 .page-1 {
   display: block;
-  width: 300px;
+  height: 330px;
+  background: url("../img/delivery.png") no-repeat 152px 69px;
 }
 
 .page-2 {
   display: none;
-   width: 380px;
+  height: 330px;
+  background: url("../img/guarantee.png") no-repeat 231px 47px;
 }
 
 .page-3 {
   display: none;
-   width: 300px;
+  height: 330px;
+  background: url("../img/credit.png") no-repeat 155px 45px;
 }
 
 .request-btn {
   background-color: #ee3643; 
   width: 195px;
   margin-top: 27px;
+}
+
+.page-1 p {
+  width: 300px;
+}
+
+.page-2 p {
+  width: 400px;
+}
+
+.page-3 p {
+  width: 300px;
 }
 
 .information .left-col {
@@ -581,95 +717,281 @@ h3 {
   background-color: #ee3643; 
 }
 
-
-.int-map {
-  display: none;
-}
-
-.write-us {
-  display: none;
-  width: 620px;
-  height: 430px;
-}
-
-.container-2 {
-  width: 460px;
-  margin: 0 auto;
-}
-/* Не получается убрать отступ до и после хлебных крошек. В чем может быть проблема?*/
-.breadcrumbs {
-  height: 60px; 
+.breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .breadcrumbs li {
   display: inline-block;
+  padding: 21px 0; 
+  padding-left: 39px;
+  
+}
+
+.breadcrumbs a,
+.breadcrumbs li{
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .left-column {
   float: left;
   width: 220px;
-  min-height: 800px;background-color: blanchedalmond;
+  min-height: 800px;
 }
 
 .right-column {
   float: right;
   width: 700px;
-  min-height: 1085px; background-color: lightblue;
+  min-height: 1085px;
 }
 
 .column-top {
-  min-height: 38px;
+  line-height: 18px;
+  padding: 10px 18px;
+  margin: 0;
   margin-bottom: 20px;
-  margin-top: 0;background-color: magenta;
+  background-color: #f7f3ec;
+  position: relative;
 }
+
+.left-column .column-top {
+  margin-bottom: 14px;
+}
+
+.sorting {
+  padding: 0;
+  margin: 0;
+  padding-left: 140px;
+  list-style: none;
+  display: inline;
+}
+
 .sorting li {
   display: inline-block;
-}
-.column-top p {
-  float: left;
-}
-.sorting {
-  float: right;
-}
-.buying {
-  display: none;
+  width: 123px;
 }
 
-.confirm {
-  display: none;
+.sorting a {
+  color: #acaaa5;
+  text-decoration: none;
+  border-bottom: 1px dotted #ee3643;
+}
+.sorting .active {
+  color: #ee3643;
+  border: none;
 }
 
-.paginator {
-  margin-top: 30px;background-color: blueviolet;
+.range-indicate {
+  position: absolute;
+  top: 14px;
+  right: 17px;
+}
+
+.range-indicate a {
+  text-decoration: none;
+  color: #acaaa5;
+  padding-left: 20px;
+}
+
+.range-indicate .active {
+  color: #ee3643;
+}
+
+legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 fieldset {
+  padding: 0;
+  margin: 0;
   border-width: 0;
-  border-bottom: 1px solid black;
-  
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 19px;
 }
 
-.filter-1 {
-  height: 188px;
+.range-controls {
+    position: relative;
+    height: 80px;
+    margin-bottom: 9px;
+    padding: 0 20px;
+    background-color: #f7f3ec;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.scale {
+    margin-top: 39px;
+    height: 2px;
+    background-color: #d7dcde;
+}
+.bar {
+    height: 2px;
+    background-color: #00ca74;
+}
+.toggle {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 4px;
+    border: 8px solid #ffffff;
+    height: 4px;
+    background-color: #ababab;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 1px 0 0 #ababab;
+}
+.min-toggle {
+    left: 20px;
+}
+.max-toggle {
+    left: 160px;
+}
+.price-controls input {
+    width: 75px;
+    padding: 10px 10px;
+    border:none;
+    background-color: #f7f3ec;
+    font-size: 17px;
+    font-family: "PTSans", "Arial", sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 25px;
 }
 
-.filter-2 {
-  height: 263px;
+.min-price {
+    margin-right: 9px;
 }
 
+.max-price {
+  margin-left: 9px;
+}
+
+.filter-2 input[type="checkbox"] {
+  display: none;
+}
+
+.filter-2 input[type="checkbox"] + label {
+  display: block;
+  padding-left: 35px;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 24px;
+}
+
+.filter-2 input[type="checkbox"] + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  /*background: url("") no-repeat 0 0;*/
+  top: -1px;
+  left: 0;
+}
+.filter-2 input[type="checkbox"]:checked + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 27px;
+  height: 27px;
+ /* background: url("") no-repeat 0 0;*/
+  top: -1px;
+  left: 0;
+}
 .filter-3 {
-  height: 200px;
   border-bottom-width: 0;
+ margin-bottom: 60px;
 }
 
-.columns {
+.filter-3 input[type="radio"] {
+  display: none;
+}
+
+.filter-3 input[type="radio"] + label {
+  display: block;
+  padding-left: 35px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+ padding-bottom: 24px;
+}
+
+.filter-3 input[type="radio"] + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  /*background: url("") no-repeat 0 0;*/
+  top: -1px;
+  left: 0;
+}
+
+.filter-3 input[type="radio"]:checked + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 27px;
+  height: 27px;
+ /* background: url("") no-repeat 0 0;*/
+  top: -1px;
+  left: 0;
+}
+
+.btn-filter {
+  width: 128px;
+  height: 36px;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  line-height: 18px;
+}
+
+.paginator {
+  margin-top: 32px; 
+}
+
+.btn-page {
+  display: inline-block;
+  min-width: 26px;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 10px 5px;
+  line-height: 18px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.next {
+  padding: 10px 19px;
+}
+
+.current {
+  background-color: #ee3643;
+  color: #ffffff;
+}
+.catalog-content {
   margin-bottom: 60px;
 }
 
 .catalog-text {
   height: 200px;
   padding-top: 30px;
-  background-color: bisque;
+  background-color: #f2f6f8;
 }
 
 .main-footer {
@@ -687,7 +1009,9 @@ fieldset {
   text-align: center;
   background-color: #ee3643;
   margin-right: 10px;
+  margin-bottom: 20px;
 }
+
 .footer-logo a {
   display: block;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -743,8 +1067,7 @@ fieldset {
 .footer-contacts {
   float: left;
   width: 330px;
-  height: 65px;
-  padding-top: 20px;
+  margin-bottom: 50px; 
 }
 
 
@@ -787,9 +1110,23 @@ fieldset {
   text-decoration: none;
 }
 
+.int-map {
+  display: none;
+}
 
+.write-us {
+  display: none;
+  width: 620px;
+  height: 430px;
+}
 
+.confirm {
+  display: none;
+}
 
-
+.container-2 {
+  width: 460px;
+  margin: 0 auto;
+}
 
 
