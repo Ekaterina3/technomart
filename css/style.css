@@ -130,7 +130,6 @@ h3 {
   width: 220px;
   text-align: center;
   background-color: #ee3643;
-  margin-right: 10px;
   
 }
 
@@ -149,40 +148,36 @@ h3 {
 
 .main-header form {
   float: left;
+  position: relative;
   
 }
 .btn-search {
-  width: 25px;
-  height: 25px;
-  display: none;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 17px;
 }
 
 input[type="search"] {
   padding: 0;
   margin: 0;
   border: 0;
-  width: 191px; 
-  background-color: #293449;
+  width: 220px; 
+  background-color: rgba(0, 0, 0, 0);
   color: #ffffff;
   padding: 12px 0;
-  padding-left: 49px;
+  padding-left: 50px;
 }
 
 input::-webkit-input-placeholder {
   font-size: 17px;
   color: #ffffff; 
 }
-
-/*button[type="submit"]::before {
-  position: absolute;
-  content: '';
-  background: url("../img/sprite.png") no-repeat -106px -10px;
-  width: 14px;
-  height: 16px;
-  top: 12px;
-  left: 239px;
-  opacity: 0.3;
-}*/
 
 .indicate {
   float: right; 
