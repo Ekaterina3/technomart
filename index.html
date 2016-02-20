@@ -114,22 +114,33 @@
             </div>
             <div class="promo-left">
               <div class="slider">
-                <!--<div class="slider-content">
-                  <img src="#" alt="#">
-                </div>-->
-                <div class="slogan">
-                  <h3>ПЕРФОРАТОРЫ</h3>
-                  <p>Настоящие мужские игрушки</p>
+                <input type="radio" name="toggle" id="slide-1" checked>
+                <input type="radio" name="toggle" id="slide-2">
+                <div class="slider-controls">
+                  <label for="slide-1"></label>
+                  <label for="slide-2"></label>
                 </div>
-                <div class="slider-nav">
-                  <button class="btn-prev">  <!--Стрелочка-->  </button>
-                  <button class="btn-next">  <!--Стрелочка-->  </button>
+                <div class="slider-inner">
+                  <div class="slider-slides">
+                    <div class="slide-1">
+                      <div class="slogan">
+                        <h3>Перфораторы</h3>
+                        <p>Настоящие мужские игрушки</p>
+                      </div>
+                      <img src="./img/slider-bg1.jpg" width="620px" height="266px" atl="Перфораторы">
+                    </div>
+                    <div class="slide-2">
+                      <div class="slogan">
+                        <h3>Дрели</h3>
+                        <p>Соседям на радость!</p>
+                      </div>
+                      <img src="./img/slider-bg2.jpg" width="620px" height="266px" atl="Дрели">
+                    </div>
+                  </div>
                 </div>
-                <div class="switch">
-                  <a class="btn slider-btn" href="#">Открыть каталог</a>
-                  <input type="radio" name="slide" checked>
-                  <input type="radio" name="slide">
-                </div>
+                <button class="slider-nav slide-prev" type="button"></button>
+                <button class="slider-nav slide-next" type="button"></button>
+                <a class="btn slider-btn" href="#">Открыть каталог</a>
               </div>
             </div>
           </div>
