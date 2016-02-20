@@ -16,18 +16,18 @@
             <a href="index.html">ТЕХНОМАРТ</a>
           </div>
           <form action="https://echo.htmlacademy.ru" method="get">
-            <button class="btn-search icon-search" type="submit"></button>
             <input class="header-search" type="search" name="search" placeholder="Поиск:">
+             <button class="btn-search icon-search" type="submit"></button>
           </form>
           <div class="indicate">
-            <div class="marks">
+            <a class="marks" href="#">
               <span>Закладки:</span>
               <span>0</span>
-            </div>
-            <div class="basket">
+            </a>
+            <a class="basket" href="#">
               <span>Корзина:</span>
               <span>0</span>
-            </div>
+            </a>
             <a class="send-order" href="#">Оформить заказ</a>
           </div>
         </div>
@@ -53,6 +53,7 @@
             <p class="user-block-nav">
               <a href="#">Мои заказы</a>
               <a href="#">Личный кабинет</a>
+              <div class="nav-separator"></div>
             </p>
           </div>
         </div>
@@ -126,7 +127,6 @@
                 </div>
                 <div class="switch">
                   <a class="btn slider-btn" href="#">Открыть каталог</a>
-                  <!--Инпуты в этом случае не нужно ведь в форму оборачивать?-->
                   <input type="radio" name="slide" checked>
                   <input type="radio" name="slide">
                 </div>
@@ -363,11 +363,11 @@
         </div>
         <div class="feedback">
           Обратная связь:
-          <span class="yellow-text-style">mail@htmlacademy.ru</span>
+          <a class="feedback-email">mail@htmlacademy.ru</a>
         </div>
         <div class="copyright">
          Разработано -<br>
-         <a class="yellow-text-style" href="https://htmlacademy.ru">htmlacademy.ru</a>
+         <a class="copyright-address" href="https://htmlacademy.ru">htmlacademy.ru</a>
         </div>
       </div>
     </footer>
