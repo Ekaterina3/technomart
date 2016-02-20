@@ -692,7 +692,7 @@ input[type="search"]:focus + .btn-search {
 .slider {
   width: 620px;
   height: 266px;
-  position: relative; background-color: cornflowerblue;
+  position: relative;
 }
 
 .slider-inner {
@@ -1084,13 +1084,7 @@ input[type="search"]:focus + .btn-search {
   background: url("../img/shadow_serv.png") no-repeat 230px 0;
 }
 
-.tabs ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.tabs a {
+.tab-controls label {
   display: block;
   width: 194px;
   background-color: #32425c;
@@ -1103,31 +1097,65 @@ input[type="search"]:focus + .btn-search {
   padding: 15px 23px;
   border-bottom: 1px solid #293449;
   border-top: 1px solid #405069;
-  
+}
+
+.tabs-inner {
+  float: right;
+  width: 620px;
+  height: 330px;
+  margin-top: 25px;
+  overflow: hidden;
 }
 
 .pages {
-  float: right;
-  width: 620px;
-  margin-top: 25px;
+  width: 300%;
+  transition: transform 0s ease;
 }
 
 .page-1 {
-  display: block;
+  float: left;
+  width: 620px;
   height: 330px;
   background: url("../img/delivery.png") no-repeat 152px 69px;
 }
 
 .page-2 {
-  display: none;
+  float: left;
+  width: 620px;
   height: 330px;
   background: url("../img/guarantee.png") no-repeat 231px 47px;
 }
 
 .page-3 {
-  display: none;
+  float: left;
+  width: 620px;
   height: 330px;
   background: url("../img/credit.png") no-repeat 155px 45px;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+#tab-1:checked ~ .tab-controls label[for="tab-1"],
+#tab-2:checked ~ .tab-controls label[for="tab-2"],
+#tab-3:checked ~ .tab-controls label[for="tab-3"] { 
+    background-color: #ffffff;
+    border-bottom-color: #ffffff;
+    border-top-color: #ffffff;
+    color: #32425c;
+}
+
+#tab-1:checked ~ .tabs-inner .pages { 
+  transform: translate(0);
+}
+
+#tab-2:checked ~ .tabs-inner .pages { 
+  transform: translate(-620px);
+}
+
+#tab-3:checked ~ .tabs-inner .pages { 
+ transform: translate(-1240px);
 }
 
 .request-btn {
