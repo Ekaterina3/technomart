@@ -1176,6 +1176,10 @@ input[type="search"]:focus + .btn-search {
   width: 300px;
 }
 
+.tab-controls label:hover {
+   background-color: #293449; 
+}
+
 .information .left-col {
   float: left;
   width: 550px;
