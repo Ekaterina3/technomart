@@ -1927,15 +1927,30 @@ fieldset {
 
 .modal-map {
   display: none;
+  position: fixed;
   width: 970px;
   height: 476px;
-  position: absolute;
-  top: 2390px;
+  background-image: url("../img/int-map.png");
+  top: 50%;
   left: 50%;
   margin-left: -485px;
+  margin-top: -238px;
+  z-index: 20;
 }
 
 .modal-map .modal-content-close {
   top: 20px;
   right: 20px;
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+  
