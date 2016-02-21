@@ -46,7 +46,6 @@
           </div>
           <div class="authorized">
             <p class="user-name-box">
-              <a class="user-icon" href="#"></a>
               <a class="user-name" href="#">Равшан Джамшутович</a>
               <a class="logout-icon" href="#"></a>
             </p>
@@ -66,7 +65,7 @@
               <a href="#">Компания</a>
             </li>
             <li>
-              <a href="#">Каталог</a>
+              <a href="catalog.html">Каталог</a>
             </li>
             <li>
               <a href="#">Новости</a>
@@ -140,7 +139,7 @@
                 </div>
                 <button class="slider-nav slide-prev" type="button"></button>
                 <button class="slider-nav slide-next" type="button"></button>
-                <a class="btn slider-btn" href="#">Открыть каталог</a>
+                <a class="btn slider-btn" href="catalog.html">Открыть каталог</a>
               </div>
             </div>
           </div>
@@ -212,46 +211,46 @@
           <a class="btn popular-btn" href="#">Все производители</a>
         </div>
         <div class="producers">
-          <div class="producer">
+          <a class="producer" href="#">
             <div class="producer-box">
               <img src="img/bosch.jpg" width="126" height="37" alt="Bosh">
             </div> 
-          </div>
-          <div class="producer"> 
+          </a>
+          <a class="producer" href="#"> 
             <div class="producer-box">
               <img src="img/Makita.jpg" width="123" height="40" alt="Makita">
             </div>
-          </div>
-          <div class="producer">
+          </a>
+          <a class="producer" href="#">
             <div class="producer-box">
               <img src="img/DeWALT.jpg" width="146" height="44" alt="Dewalt">
             </div>
-          </div>
-          <div class="producer"> 
+          </a>
+          <a class="producer" href="#"> 
             <div class="producer-box">
               <img src="img/Interskol.jpg" width="200" height="88" alt="Интерскол">
             </div>
-          </div>
-          <div class="producer"> 
+          </a>
+          <a class="producer" href="#"> 
             <div class="producer-box">
               <img src="img/Hitachi.jpg" width="169" height="31" alt="Hitachi">
             </div>
-          </div>
-          <div class="producer"> 
+          </a>
+          <a class="producer" href="#"> 
             <div class="producer-box">
               <img src="img/LG.jpg" width="121" height="73" alt="LG">
             </div>
-          </div>
-          <div class="producer">   
+          </a>
+          <a class="producer" href="#">   
             <div class="producer-box">
               <img src="img/AEG.jpg" width="151" height="96" alt="AEG">
             </div>
-          </div>
-          <div class="producer">  
+          </a>
+          <a class="producer" href="#">  
             <div class="producer-box">
               <img src="img/Metabo.jpg" width="204" height="69" alt="Metabo">
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div class="service">
@@ -259,7 +258,7 @@
           <h2>Сервисы</h2>
           <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <div class="slider-2 clearfix">
-            <div class="tabs">
+            
               <input type="radio" name="toggle" id="tab-1" checked>
               <input type="radio" name="toggle" id="tab-2">
               <input type="radio" name="toggle" id="tab-3">
@@ -268,7 +267,6 @@
                   <label for="tab-2">Гарантия</label>
                   <label for="tab-3">Кредит</label>
               </div>
-            </div>
             <div class="tabs-inner">
               <div class="pages">
                 <div class="page-1">
@@ -333,7 +331,7 @@
               <a href="#">Новости</a>
             </li>
             <li>
-              <a href="#">Каталог</a>
+              <a href="catalog.html">Каталог</a>
             </li>
             <li>
               <a href="#">Доставка</a>
@@ -373,7 +371,7 @@
         </div>
         <div class="feedback">
           Обратная связь:
-          <a class="feedback-email">mail@htmlacademy.ru</a>
+          <a class="feedback-email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
         <div class="copyright">
          Разработано -<br>
@@ -382,21 +380,28 @@
       </div>
     </footer>
     <div class="modal-content">
-      <div class="int-map">
+      <div class="modal-map">
         <img src="img/int-map.png" width="970" height="476" alt="Карта">
+        <button class="modal-content-close" type="button" title="Закрыть"></button>
       </div>
-      <div class="write-us">
+      <div class="modal-write-us">
         <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="container-2">
-            <input id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
-            <label for="name">Ваше имя:</label>
-            <input id="email" type="text" name="mail" placeholder="Для отправки ответа">
-            <label for="email">Ваш e-mail:</label>
-            <textarea id="letter" name="letter" rows="5" cols="62" placeholder="В свободной форме"></textarea>
-            <label for="letter">Текст письма:</label>
+          <div class="modal-container">
+            <div class="write-us-name">
+              <label for="name">Ваше имя:</label>
+              <input id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="write-us-email">
+              <label for="email">Ваш e-mail:</label>
+              <input id="email" type="text" name="email" placeholder="Для отправки ответа">
+            </div>
+            <div class="write-us-letter">
+              <label for="letter">Текст письма:</label>
+              <textarea id="letter" name="letter" rows="5" cols="62" placeholder="В свободной форме"></textarea>
+            </div>
           </div>
-          <div class="btn-area">
-            <div class="container-2">
+          <div class="modal-btn-area">
+            <div class="modal-container">
               <button class="btn write-us-btn" type="submit">Отправить</button>
             </div>
           </div>

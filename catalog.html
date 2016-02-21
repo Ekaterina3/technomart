@@ -24,9 +24,9 @@
               <span>Закладки:</span>
               <span>0</span>
             </a>
-            <a class="basket" href="#">
+            <a class="basket full-indicate" href="#">
               <span>Корзина:</span>
-              <span>0</span>
+              <span>10</span>
             </a>
             <a class="send-order" href="#">Оформить заказ</a>
           </div>
@@ -46,7 +46,6 @@
           </div>
           <div class="authorized">
             <p class="user-name-box">
-              <a class="user-icon" href="#"></a>
               <a class="user-name" href="#">Равшан Джамшутович</a>
               <a class="logout-icon" href="#"></a>
             </p>
@@ -66,7 +65,7 @@
               <a href="#">Компания</a>
             </li>
             <li>
-              <a href="#">Каталог</a>
+              <a href="catalog.html">Каталог</a>
             </li>
             <li>
               <a href="#">Новости</a>
@@ -93,7 +92,7 @@
             </li>
             <span class="icon-right"></span>
             <li>
-              <a href="#">Каталог</a>
+              <a href="catalog.html">Каталог</a>
             </li>
             <span class="icon-right"></span>
             <li>
@@ -149,11 +148,11 @@
           </form>
         </aside>
           <div class="right-column">
-          <div class="column-top">
+          <div class="column-top sorting">
             <span>Сортировка:</span>
-            <ul class="sorting">
+            <ul class="sorting-types">
               <li>
-                <a href="#">По цене</a>
+                <a href="#" class="active-sort">По цене</a>
               </li>
               <li>
                 <a href="#">По типу</a>
@@ -163,8 +162,8 @@
               </li>
             </ul>
             <div class="range-indicate">
-              <a class="icon-up-dir" href="#"></a>
-              <a class="icon-down-dir" href="#"></a>
+              <span class="icon-up-dir active-sort"></span>
+              <span class="icon-down-dir"></span>
             </div>
           </div>
           <div class="catalog-list clearfix">
@@ -366,7 +365,7 @@
         </div>
         <div class="feedback">
           Обратная связь:
-          <a class="feedback-email">mail@htmlacademy.ru</a>
+          <a class="feedback-email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
         <div class="copyright">
          Разработано -<br>
@@ -375,15 +374,16 @@
       </div>
     </footer>
     <div class="modal-content">
-      <div class="confirm">
-        <div class="container-2">
-          <img src="#">
-          <p>Товар добавлен в корзину!</p>
+      <div class="buying-confirm">
+        <div class="modal-container">
+          <div class="confirm-check"></div>
+          <span>Товар добавлен в корзину!</span>
         </div>
-        <div class="btn-area">
-          <div class="container-2">
-            <a class="btn" href="#">Оформить заказ</a>
-            <a class="btn continue" href="#">Продолжить покупки</a>
+        <div class="modal-btn-area">
+          <div class="modal-container">
+            <a class="btn confirm-btn" href="#">Оформить заказ</a>
+            <a class="btn continue-btn" href="#">Продолжить покупки</a>
+            <button class="modal-content-close" type="button" title="Закрыть"></button>
           </div>
         </div>
       </div>
