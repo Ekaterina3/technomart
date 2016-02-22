@@ -384,22 +384,21 @@
       <div class="modal-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="970" height="476" allowfullscreen></iframe>
         <button class="modal-content-close" type="button" title="Закрыть"></button>
-        <div class="modaloverlay"></div>
       </div>
       <div class="modal-write-us">
         <form action="https://echo.htmlacademy.ru" method="post">
           <div class="modal-container">
             <div class="write-us-name">
               <label for="name">Ваше имя:</label>
-              <input id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+              <input id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста" required>
             </div>
             <div class="write-us-email">
               <label for="email">Ваш e-mail:</label>
-              <input id="email" type="text" name="email" placeholder="Для отправки ответа">
+              <input id="email" type="text" name="email" placeholder="Для отправки ответа" required>
             </div>
             <div class="write-us-letter">
               <label for="letter">Текст письма:</label>
-              <textarea id="letter" name="letter" rows="5" cols="62" placeholder="В свободной форме"></textarea>
+              <textarea id="letter" name="letter" rows="5" cols="62" placeholder="В свободной форме" required></textarea>
             </div>
           </div>
           <div class="modal-btn-area">
@@ -424,6 +423,7 @@
         </div>
       </div>
     </div>
+    <!--<div class="modal-overlay"></div>-->
     <script src="js/script.js"></script>
   </body>
 </html>
