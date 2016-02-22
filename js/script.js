@@ -25,21 +25,7 @@ window.addEventListener("keydown", function(event) {
     }
   }
 });
-/*
-var confirmLink = document.querySelectorAll(".btn-buy");
-var confirmPopup = document.querySelector(".buying-confirm");
-var confirmClose = popup.querySelector(".modal-content-close");
 
-confirmLink.addEventListener("click", function(event) {
-  event.preventDefault();
-  confirmPopup.classList.add("modal-content-show");    
-})
-
-confirmClose.addEventListener("click", function(event) {
-  event.preventDefault();
-  confirmPopup.classList.remove("modal-content-show");   
-
-});*/
 
 var mapOpen = document.querySelector(".map");
 var mapPopup = document.querySelector(".modal-map");
@@ -61,4 +47,20 @@ window.addEventListener("keydown", function(event) {
       mapPopup.classList.remove("modal-content-show");
     }
   }
+});
+
+
+var confirmLink = document.querySelector(".btn-buy");  /*Когда пишу querySelectorAll,скрипт перестает работатьб а консоль пишет, что confirmLink.addEventListener не функция.*/
+var confirmPopup = document.querySelector(".buying-confirm");
+var confirmClose = confirmPopup.querySelector(".modal-content-close");
+
+confirmLink.addEventListener("click", function(event) {
+  event.preventDefault();
+  confirmPopup.classList.add("modal-content-show");    
+})
+
+confirmClose.addEventListener("click", function(event) {
+  event.preventDefault();
+  confirmPopup.classList.remove("modal-content-show");   
+
 });
