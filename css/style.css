@@ -1404,6 +1404,7 @@ fieldset {
     background-color: #d7dcde;
 }
 .bar {
+    width: 160px;
     height: 2px;
     background-color: #00ca74;
 }
