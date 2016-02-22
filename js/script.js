@@ -30,8 +30,6 @@ window.addEventListener("keydown", function(event) {
 });
 
 
-
-
 var link = document.querySelector(".write-btn");
 var popup = document.querySelector(".modal-write-us");
 var close = popup.querySelector(".modal-content-close");
