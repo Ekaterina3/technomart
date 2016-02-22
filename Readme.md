@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Екатерина Елесова](https://htmlacademy.ru/profile/id139515).
-* Наставник: [Оксана Климова] (https://htmlacademy.ru/profile/id6652).
+* Наставник: [Вадим Новаш] (https://htmlacademy.ru/profile/id6652).
 
 ---
 
