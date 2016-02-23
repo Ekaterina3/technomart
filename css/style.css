@@ -226,6 +226,7 @@ input[type="search"]:focus + .btn-search {
   padding-left: 44px;
   color: #ffffff;
   text-decoration: none;
+  vertical-align: middle;
 }
 
 .marks::before {
@@ -265,6 +266,7 @@ input[type="search"]:focus + .btn-search {
   padding-left: 50px;
   color: #ffffff;
   text-decoration: none;
+  vertical-align: middle;
 }
 
 .basket::before {
@@ -310,6 +312,7 @@ input[type="search"]:focus + .btn-search {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
+  vertical-align: middle;
 }
 
 .send-order:hover {
@@ -477,6 +480,7 @@ input[type="search"]:focus + .btn-search {
   text-decoration: none;
   color: #000000;
   background: #ffffff;
+  vertical-align: middle;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 48px;
@@ -582,6 +586,7 @@ input[type="search"]:focus + .btn-search {
 
 .main-navigation li {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .main-navigation a {
@@ -1318,6 +1323,7 @@ input[type="search"]:focus + .btn-search {
 .breadcrumbs li {
   display: inline-block;
   padding: 21px 0;
+  vertical-align: middle;
 }
 
 .breadcrumbs a,
@@ -1375,6 +1381,7 @@ input[type="search"]:focus + .btn-search {
 
 .sorting-types li {
   display: inline-block;
+  vertical-align: middle;
   margin-right: 60px;
 }
 
@@ -1614,6 +1621,7 @@ fieldset {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 3px;
+  vertical-align: top;
 }
 
 .next {
@@ -1694,6 +1702,7 @@ fieldset {
 
 .footer-navigation li {
   display: inline-block; 
+  vertical-align: top;
 }
 
 .footer-navigation a {
@@ -1945,6 +1954,7 @@ fieldset {
   height: 66px;
   background: #63a63e url("../img/check.png") no-repeat 14px 18px;
   border-radius: 50%;
+  vertical-align: middle;
   margin-right: 33px;
   margin-bottom: 50px;
 }
@@ -1954,6 +1964,7 @@ fieldset {
   background-color: #ee3643;
   width: 220px;
   font-size: 14px;
+  vertical-align: middle;
   margin-right: 20px;
 }
 
@@ -1963,6 +1974,7 @@ fieldset {
   width: 220px;
   color: #000000;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .continue-btn:hover{
