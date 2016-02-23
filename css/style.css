@@ -166,7 +166,7 @@ h3 {
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
   top: 0;
-  left: 0;
+  left: 8px;
   color: rgba(255, 255, 255, 0.3);
   font-size: 17px;
 }
@@ -230,7 +230,7 @@ input[type="search"]:focus + .btn-search {
 
 .marks::before {
   position: absolute;
-  content: '';
+  content: "";
   background: url("../img/sprite.png") no-repeat -10px -46px;
   width: 14px;
   height: 16px;
@@ -269,7 +269,7 @@ input[type="search"]:focus + .btn-search {
 
 .basket::before {
   position: absolute;
-  content: '';
+  content: "";
   background: url("../img/sprite.png") no-repeat -10px -10px;
   width: 17px;
   height: 16px;
@@ -360,7 +360,7 @@ input[type="search"]:focus + .btn-search {
 
 .phone::before {
   position: absolute;
-  content: '';
+  content: "";
   background: url("../img/sprite.png") no-repeat  -10px -365px;
   width: 19px;
   height: 19px;
@@ -417,7 +417,7 @@ input[type="search"]:focus + .btn-search {
 }
 
 .login::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   background: url("../img/sprite.png") no-repeat -10px -217px;
@@ -485,7 +485,7 @@ input[type="search"]:focus + .btn-search {
 }
 
 .user-name::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   background: url("../img/sprite.png") no-repeat -10px -464px;
@@ -496,7 +496,7 @@ input[type="search"]:focus + .btn-search {
 }
 
 .logout-icon::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   background: url("../img/sprite.png") no-repeat -10px -291px;
@@ -849,7 +849,7 @@ input[type="search"]:focus + .btn-search {
   z-index: 10;
   width: 60px;
   height: 60px;
-  content: '';
+  content: "";
   background: url("../img/new.png") no-repeat 0 0;
 }
 
@@ -962,7 +962,7 @@ input[type="search"]:focus + .btn-search {
   right: -20px;
   width: 0;
   height: 0;
-  content: '';
+  content: "";
   border: 19px solid #ffffff;
   border-left-color: #ee3643;
 }
@@ -974,7 +974,7 @@ input[type="search"]:focus + .btn-search {
   z-index: 10;
   width: 60px;
   height: 60px;
-  content: '';
+  content: "";
   background: url("../img/new.png") no-repeat 0 0;
 }
 
@@ -990,7 +990,7 @@ input[type="search"]:focus + .btn-search {
 
 .btn-buy,
 .btn-mark {
-  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   display: block;
   width: 135px;
@@ -1010,7 +1010,7 @@ input[type="search"]:focus + .btn-search {
 
 .btn-buy::before {
   position: absolute;
-  content: '';
+  content: "";
   background: url("../img/sprite.png") no-repeat -10px -10px;
   width: 17px;
   height: 16px;
@@ -1137,7 +1137,7 @@ input[type="search"]:focus + .btn-search {
 
 .tab-controls::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 10px;
   height: 272px;
   background-image: url("../img/shadow_serv.png");
@@ -1396,12 +1396,17 @@ input[type="search"]:focus + .btn-search {
 .range-indicate {
   position: absolute;
   top: 8px;
-  right: 17px;
-  color: #acaaa5;
-  font-size: 20px;
+  right: 5px;
+  font-size: 0;
 }
 
-.range-indicate span:hover {
+.range-indicate a {
+  font-size: 20px;
+  color: #acaaa5;
+  text-decoration: none;
+}
+
+.range-indicate a:hover {
   color: #000000;
   cursor: pointer;
 }
@@ -1500,7 +1505,7 @@ fieldset {
 }
 
 .filter-2 input[type="checkbox"] + label::before {
-   content: '\2610';
+  content: "\2610";
   position: absolute;
   width: 27px;
   height: 23px;
@@ -1512,7 +1517,7 @@ fieldset {
 }
 
 .filter-2 input[type="checkbox"]:checked + label::before {
-  content: '\2611';
+  content: "\2611";
   position: absolute;
   width: 27px;
   height: 23px;
@@ -1552,7 +1557,7 @@ fieldset {
 }
 
 .filter-3 input[type="radio"] + label::before {
-  content: '\25cb';
+  content: "\25cb";
   position: absolute;
   width: 27px;
   height: 23px;
@@ -1564,7 +1569,7 @@ fieldset {
 }
 
 .filter-3 input[type="radio"]:checked + label::before {
-  content: '\25cf';
+  content: "\25cf";
   position: absolute;
   width: 27px;
   height: 23px;
@@ -1762,7 +1767,7 @@ fieldset {
 
 .social-btn::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2033,7 +2038,7 @@ fieldset {
 .modal-content::after{
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
