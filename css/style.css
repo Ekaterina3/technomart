@@ -879,8 +879,14 @@ input[type="search"]:focus + .btn-search {
   background-color: #ee3643; 
 }
 
+.index-items,
+.catalog-list {
+  font-size: 0;
+}
+
 .item {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: 218px;
   min-height: 316px;
   position: relative;
@@ -892,7 +898,7 @@ input[type="search"]:focus + .btn-search {
   
 }
 
-.item:last-child {
+.index-items .item:nth-child(4n) {
   margin-right: 0;
 }
 
