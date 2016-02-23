@@ -1,7 +1,6 @@
-
 var overlay = document.querySelector(".modal-content");
 var confirmLink = document.querySelectorAll(".btn-buy");
-var confirmPopup = document.querySelector(".buying-confirm");
+var confirmPopup = document.querySelector(".modal-buying-confirm");
 var confirmClose = confirmPopup.querySelector(".modal-content-close");
 
 
